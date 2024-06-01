@@ -82,37 +82,24 @@ int main() {
 
 
 **解：**
-
 ```Cpp
-#include <iostream>
+int main() 
+{
+	using namespace std;
+	int num;
+	int initial = 0;
+	do
+	{
+		cout << "Enter the number: ";
+		cin >> num;
+		initial = initial + num;
+		cout << "So far, the sum of all inputs equal to " << initial << endl;
 
-
-int main() {
-    using namespace std;
-
-    double s = 0;
-    double ch;
-
-    while (1) {
-
-        cout << "Enter a number (int/double) (0 to exit): ";
-        cin >> ch;
-
-        if (ch == 0) {
-            break;
-        }
-
-        s += ch;
-        cout << "Until now, the sum of the number you inputed is: " 
-             << s << endl;
-    }
-
-    return 0;
+	} while (num != 0);
+	
+	return 0;
 }
-
 ```
-
-
 ## 5.4
 
 **题：** Daphne以10%的单利投资了100美元。也就是说，每一年的利润都是投资额的10%，即每年10美元。而Cleo以5%的复利投资了100美元。也就是说，利息是当前存款（包括获得的利息）的5%，Cleo在第一年投资100美元的盈利是5%—得到了105美元。下一年的盈利是105美元的5%—即5.25美元，依此类推。请编写一个程序，计算多少年后，Cleo的投资价值才能超过Daphne的投资价值，并显示此时两个人的投资价值。
